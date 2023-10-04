@@ -113,8 +113,9 @@ let characters = []
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
   const singlename = starWarsCharacters[i];
-  console.log(singlename.name)
+  characters.push(singlename.name)
 }
+console.log(characters)
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
@@ -122,23 +123,41 @@ let femaleCharacters = []
 for (let i  = 0; i  < starWarsCharacters.length; i ++) {
   const singlename = starWarsCharacters[i];
   if (singlename.gender === "female") {
-    console.log(singlename)
+    femaleCharacters.push(singlename)
   }
   }
+console.log(singlename)
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
-for (let i  = 0; i  < starWarsCharacters.length; i ++) {
-  const singlename = starWarsCharacters[i]
-  singlename.eyeColor = "blue, yellow, brown, red, blue-gray"
-  console.log(singlename)
-}
+const eyeColor = {
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  "blue-gray": [],
+};
+
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
-
+for (let i = 0; i < starWarsCharacters.lengthtlet i++) {
+   switch (starWarsCharacters[1].eye_color) {
+  case "blue": eyeColor.blue.push(starWarsCharacters[1])
+    break;
+  case "yellow": eyeColor.yellow.push(starWarsCharacters[1])
+    break;
+  case "red": eyeColor.red.push(starWarsCharacters[1])
+    break;
+  case "blue-gray": eyeColor["blue-gray"].push(starWarsCharacters[1])
+    break;
+  case "brown": eyeColor.brown.push(starWarsCharacters[1])
+    break;
+}
+}
+console.log(eyeColor)
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
